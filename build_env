@@ -1,0 +1,17 @@
+# environment to be sourced in current shell
+
+# the base work directory, where this scripts are installed
+export ASTRO_ROOT=~/indi-mac
+
+# work directories
+export DIR="${ASTRO_ROOT}"/kstars-on-osx-craft
+export CRAFT_DIR="${ASTRO_ROOT}"/craft
+export SHORTCUTS_DIR="${ASTRO_ROOT}"/craft-shortcuts
+
+# min macos version to support
+export QMAKE_MACOSX_DEPLOYMENT_TARGET=10.12
+export MACOSX_DEPLOYMENT_TARGET=10.12
+
+# target application indi is installed to
+export DMG_DIR=$ASTRO_ROOT/testapp
+export TARGET_APP=$DMG_DIR/test.app
