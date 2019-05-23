@@ -15,6 +15,8 @@ The last step is to run the script **install_libraries.sh** to copy the required
 
 ## Typical use:
 
+- mkdir src 
+- cd src
 - git clone https://github.com/pchev/indi-mac.git
 - cd indi-mac
 - vi build_env

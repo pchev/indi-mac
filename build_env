@@ -1,7 +1,7 @@
 # environment to be sourced in current shell
 
 # the base work directory, where this scripts are installed
-export ASTRO_ROOT=~/indi-mac
+export ASTRO_ROOT=~/src/indi-mac
 
 # work directories
 export DIR="${ASTRO_ROOT}"/kstars-on-osx-craft
