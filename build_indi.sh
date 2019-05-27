@@ -63,7 +63,11 @@ git clone https://github.com/rlancaste/craft-blueprints-kde.git
 # build indi
 echo Build INDI
 source $CRAFT_DIR/craft/craftenv.sh
-TARGET_VER="latest"
+TARGET_VER="default"
 craft -i --target "${TARGET_VER}" indiserver
 craft -i --target "${TARGET_VER}" indiserver3rdPartyLibraries
 craft -i --target "${TARGET_VER}" indiserver3rdParty
+
+#This will build gsc
+echo "Building GSC"
+craft gsc
