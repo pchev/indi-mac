@@ -47,4 +47,7 @@ mkdir -p ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/IOLIBS
 mkdir -p ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/CAMLIBS
 cp -rf $CRAFT_DIR/lib/libgphoto2_port/$PORT_VERSION/* ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/IOLIBS/
 cp -rf $CRAFT_DIR/lib/libgphoto2/$GPHOTO_VERSION/* ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/CAMLIBS/
+# GSC executable
+echo Copy gsc
+cp -f $CRAFT_DIR/bin/gsc ${TARGET_APP}/Contents/MacOS/indi/
 
