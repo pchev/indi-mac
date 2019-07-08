@@ -12,6 +12,9 @@ export SHORTCUTS_DIR="${ASTRO_ROOT}"/craft-shortcuts
 export QMAKE_MACOSX_DEPLOYMENT_TARGET=10.12
 export MACOSX_DEPLOYMENT_TARGET=10.12
 
+# INDI version
+export BUILD_INDI_VERSION=1.7.9
+
 # target application indi is installed to
 export DMG_DIR=$ASTRO_ROOT/testapp
 export TARGET_APP=$DMG_DIR/test.app

@@ -60,6 +60,11 @@ rm -rf $CRAFT_DIR/etc/blueprints/locations/craft-blueprints-kde
 cd $CRAFT_DIR/etc/blueprints/locations
 git clone https://github.com/rlancaste/craft-blueprints-kde.git
 
+# force new version
+sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver/indiserver.py
+sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
+sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdPartyLibraries/indiserver3rdPartyLibraries.py
+
 # build indi
 echo Build INDI
 source $CRAFT_DIR/craft/craftenv.sh
