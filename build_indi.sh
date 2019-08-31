@@ -70,9 +70,14 @@ echo Build INDI
 source $CRAFT_DIR/craft/craftenv.sh
 TARGET_VER="default"
 craft -i --target "${TARGET_VER}" indiserver
+if [[ $? != 0 ]]; then exit 1; fi
 craft -i --target "${TARGET_VER}" indiserver3rdPartyLibraries
+if [[ $? != 0 ]]; then exit 1; fi
 craft -i --target "${TARGET_VER}" indiserver3rdParty
+if [[ $? != 0 ]]; then exit 1; fi
 
 #This will build gsc
 echo "Building GSC"
 craft gsc
+if [[ $? != 0 ]]; then exit 1; fi
+

@@ -12,8 +12,11 @@
 
 # cd in target app
 cd ${TARGET_APP}
+if [[ $? != 0 ]]; then exit 1; fi
 # tar indi
 tar cvzf indimac.tgz Contents
+if [[ $? != 0 ]]; then exit 1; fi
 # move to root
 mv indimac.tgz ${ASTRO_ROOT}/
+if [[ $? != 0 ]]; then exit 1; fi
 

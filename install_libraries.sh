@@ -159,17 +159,17 @@ fi
 	if [ ! -e ${CRAFT_DIR} ]
 	then
 		echo "Craft directory does not exist.  You have to build INDI with Craft first."
-		exit
+		exit 9
 	fi
 	if [ ! -e ${DMG_DIR} ]
 	then
 		echo "Target directory does not exist."
-		exit
+		exit 9
 	fi
 	if [ ! -e ${TARGET_APP} ]
 	then
 		echo "Target application does not exist."
-		exit
+		exit 9
 	fi
 	
 echo "Running Fix Libraries Script"
