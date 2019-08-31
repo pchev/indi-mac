@@ -69,6 +69,17 @@ sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-bl
 echo Build INDI
 source $CRAFT_DIR/craft/craftenv.sh
 TARGET_VER="default"
+# cleanup old library because old link are not replaced by make install 
+rm $CRAFT_DIR/lib/libfishcamp*.dylib
+rm $CRAFT_DIR/lib/libqsiapi*.dylib
+rm $CRAFT_DIR/lib/libapogee*.dylib
+rm $CRAFT_DIR/lib/libfli*.dylib
+rm $CRAFT_DIR/lib/libtoupcam*.dylib
+rm $CRAFT_DIR/lib/libatikcameras2*.dylib
+rm $CRAFT_DIR/lib/libqhyccd*.dylib
+rm $CRAFT_DIR/lib/libaltaircam*.dylib
+rm $CRAFT_DIR/lib/libsbig*.dylib
+# build
 craft -i --target "${TARGET_VER}" indiserver
 if [[ $? != 0 ]]; then exit 1; fi
 craft -i --target "${TARGET_VER}" indiserver3rdPartyLibraries
