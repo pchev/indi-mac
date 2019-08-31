@@ -29,20 +29,16 @@ mkdir ${TARGET_APP}/Contents/Frameworks
 echo copy INDI drivers
 mkdir -p ${TARGET_APP}/Contents/MacOS/indi
 cp -f $CRAFT_DIR/bin/indi* ${TARGET_APP}/Contents/MacOS/indi/
-if [[ $? != 0 ]]; then exit 1; fi
 # INDI firmware files
 echo Copy INDI firmware files
 mkdir -p ${TARGET_APP}/Contents/Resources/DriverSupport
 cp -rf $CRAFT_DIR/usr/local/lib/indi/DriverSupport ${TARGET_APP}/Contents/Resources/
-if [[ $? != 0 ]]; then exit 1; fi
 # Driver XML Files
 echo Copy Driver XML Files
 cp -f $CRAFT_DIR/share/indi/* ${TARGET_APP}/Contents/Resources/DriverSupport/
-if [[ $? != 0 ]]; then exit 1; fi
 # Math Plugins
 echo Copy  Math Plugins
 cp -rf $CRAFT_DIR/lib/indi/MathPlugins ${TARGET_APP}/Contents/Resources/
-if [[ $? != 0 ]]; then exit 1; fi
 # GPhoto Plugins
 echo Copy GPhoto Plugins
 GPHOTO_VERSION="2.5.18"
@@ -50,11 +46,8 @@ PORT_VERSION="0.12.0"
 mkdir -p ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/IOLIBS
 mkdir -p ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/CAMLIBS
 cp -rf $CRAFT_DIR/lib/libgphoto2_port/$PORT_VERSION/* ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/IOLIBS/
-if [[ $? != 0 ]]; then exit 1; fi
 cp -rf $CRAFT_DIR/lib/libgphoto2/$GPHOTO_VERSION/* ${TARGET_APP}/Contents/Resources/DriverSupport/gphoto/CAMLIBS/
-if [[ $? != 0 ]]; then exit 1; fi
 # GSC executable
 echo Copy gsc
 cp -f $CRAFT_DIR/bin/gsc ${TARGET_APP}/Contents/MacOS/indi/
-if [[ $? != 0 ]]; then exit 1; fi
 
