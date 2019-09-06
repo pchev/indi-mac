@@ -14,9 +14,9 @@
 cd ${TARGET_APP}
 if [[ $? != 0 ]]; then exit 1; fi
 # tar indi
-tar cvzf indimac.tgz Contents
+tar cvzf indimac-$BUILD_INDI_VERSION.tgz Contents
 if [[ $? != 0 ]]; then exit 1; fi
 # move to root
-mv indimac.tgz ${ASTRO_ROOT}/
+mv indimac-$BUILD_INDI_VERSION.tgz ${ASTRO_ROOT}/
 if [[ $? != 0 ]]; then exit 1; fi
 
