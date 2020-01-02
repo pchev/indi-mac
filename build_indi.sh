@@ -60,6 +60,8 @@ rm -rf $CRAFT_DIR/etc/blueprints/locations/craft-blueprints-kde
 cd $CRAFT_DIR/etc/blueprints/locations
 git clone https://github.com/rlancaste/craft-blueprints-kde.git
 
+#fix cfitsio
+sed -i.bak "s/ftp:\/\/heasarc\.gsfc\.nasa\.gov/https:\/\/heasarc\.gsfc\.nasa\.gov\/FTP/" craft-blueprints-kde/libs/cfitsio/cfitsio.py
 # force new version
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver/indiserver.py
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
