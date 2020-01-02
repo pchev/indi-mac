@@ -54,8 +54,8 @@ fi
 
 # setup craft
 echo Setup Craft
-cp $DIR/CraftSettings.ini $CRAFT_DIR/etc/
-cp $DIR/BlueprintSettings.ini $CRAFT_DIR/etc/
+cp $DIR/settings/CraftSettings.ini $CRAFT_DIR/etc/
+cp $DIR/settings/BlueprintSettings.ini $CRAFT_DIR/etc/
 rm -rf $CRAFT_DIR/etc/blueprints/locations/craft-blueprints-kde
 cd $CRAFT_DIR/etc/blueprints/locations
 git clone https://github.com/rlancaste/craft-blueprints-kde.git
@@ -64,6 +64,9 @@ git clone https://github.com/rlancaste/craft-blueprints-kde.git
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver/indiserver.py
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdPartyLibraries/indiserver3rdPartyLibraries.py
+# fix new repo
+sed -i.bak "s/indi.git/indi-3rdparty.git/" craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
+sed -i.bak "s/indi.git/indi-3rdparty.git/" craft-blueprints-kde/libs/indiserver3rdPartyLibraries/indiserver3rdPartyLibraries.py
 
 # build indi
 echo Build INDI
