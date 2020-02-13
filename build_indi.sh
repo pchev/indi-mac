@@ -64,6 +64,8 @@ git clone https://github.com/rlancaste/craft-blueprints-kde.git
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver/indiserver.py
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
 sed -i.bak "s/ver = '[0-9].[0-9].[0-9]'/ver = '${BUILD_INDI_VERSION}'/" craft-blueprints-kde/libs/indiserver3rdPartyLibraries/indiserver3rdPartyLibraries.py
+# webcam
+sed -i.bak "s/-DCMAKE_BUILD_TYPE/-DWITH_WEBCAM=On -DCMAKE_BUILD_TYPE/"  craft-blueprints-kde/libs/indiserver3rdParty/indiserver3rdParty.py
 
 # build indi
 echo Build INDI
