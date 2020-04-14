@@ -70,7 +70,7 @@ sed -i.bak "s/-DCMAKE_BUILD_TYPE/-DWITH_WEBCAM=On -DCMAKE_BUILD_TYPE/"  craft-bl
 # build indi
 echo Build INDI
 source $CRAFT_DIR/craft/craftenv.sh
-TARGET_VER="default"
+TARGET_VER="${BUILD_INDI_VERSION}"
 # cleanup old library because old link are not replaced by make install 
 rm $CRAFT_DIR/lib/libfishcamp*.dylib
 rm $CRAFT_DIR/lib/libqsiapi*.dylib
