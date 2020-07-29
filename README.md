@@ -3,7 +3,7 @@
 
 This scripts allow to compile INDI with Craft and add it to any client application bundle.
 
-The first step is to edit the file **build_env** to setup the directories to use and the target application.
+The first step is to edit the file **build_env** to setup the directories to use, the INDI version to compile and the target application.
 Open a terminal and source this file every time before to run another script.
 
 On this terminal run the script **build_indi.sh** to install Craft and the other prerequisites, then compile the INDI server and drivers.
