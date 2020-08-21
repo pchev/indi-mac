@@ -81,6 +81,14 @@ rm $CRAFT_DIR/lib/libatikcameras2*.dylib
 rm $CRAFT_DIR/lib/libqhyccd*.dylib
 rm $CRAFT_DIR/lib/libaltaircam*.dylib
 rm $CRAFT_DIR/lib/libsbig*.dylib
+rm $CRAFT_DIR/lib/libgxccd*.dylib
+rm $CRAFT_DIR/lib/libASICamera*.dylib
+rm $CRAFT_DIR/lib/libEFWFilter*.dylib
+rm $CRAFT_DIR/lib/libEAFFocuser*.dylib
+rm $CRAFT_DIR/lib/libmallincam*.dylib
+rm $CRAFT_DIR/lib/libstarshootg*.dylib
+rm $CRAFT_DIR/lib/libnncam*.dylib
+rm $CRAFT_DIR/lib/libUSB2ST4Conv*.dylib
 # build
 craft -i --target "${TARGET_VER}" indiserver
 if [[ $? != 0 ]]; then exit 1; fi
