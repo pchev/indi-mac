@@ -38,7 +38,7 @@ else
   echo Install Craft
   mkdir -p $CRAFT_DIR
   curl https://raw.githubusercontent.com/KDE/craft/master/setup/CraftBootstrap.py -o setup.py 
-  python3.7 setup.py --prefix $CRAFT_DIR
+  python3 setup.py --prefix $CRAFT_DIR
 fi  
 
 # install INDI craft scripts 
