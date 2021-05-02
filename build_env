@@ -9,8 +9,8 @@ export CRAFT_DIR="${ASTRO_ROOT}"/craft
 export SHORTCUTS_DIR="${ASTRO_ROOT}"/craft-shortcuts
 
 # min macos version to support
-export QMAKE_MACOSX_DEPLOYMENT_TARGET=10.12
-export MACOSX_DEPLOYMENT_TARGET=10.12
+export QMAKE_MACOSX_DEPLOYMENT_TARGET=10.13
+export MACOSX_DEPLOYMENT_TARGET=10.13
 
 # INDI version
 export BUILD_INDI_VERSION=1.8.6
